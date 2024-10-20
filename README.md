@@ -12,3 +12,5 @@
     - Hoisting (Function declarations are hoisted to the top of their scope. This means you can call a function before it's declared)
     - Scope (Global and Local)
 - Review of the topics covered so far
+
+- JSDocs
