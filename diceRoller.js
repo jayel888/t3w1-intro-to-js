@@ -25,7 +25,7 @@ const rollDice25 = function () {
 
 rollDice25();
 
-// Using arrow function
+// Using arrow function / Unanonymous function
 const rollDice15 = () => {
     return rollDice(15);
     // or
@@ -39,3 +39,23 @@ console.log("The side you rolled on this 15-sided die is: " + diceSide15)
 // If we want more functionality, then we use the {}, otherwise w can use the shortended version.
 const rollDice8 = () => rollDice(8);
 console.log("The side you rolled for the 8-sided die is: " + rollDice8());
+
+// Implementing the callback feature/functionality/characteristic of function
+function customDiceRoll(side, callback) {
+    return callback(side);
+}
+
+result = customDiceRoll(30, rollDice);
+console.log(result);
+
+// Example of Hoisting
+rollMultipleDice(3, 6, (result) => console.log("Rolled: " + result));
+
+// Function to roll multiple dice
+function rollMultipleDice(numDice, diceSize, callback) {
+    for (let i=0; i < numDice ; i++) {
+        const result = rollDice(diceSize);
+        callback(result);
+    }
+}
+
